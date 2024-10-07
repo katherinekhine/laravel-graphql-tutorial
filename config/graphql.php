@@ -1,6 +1,9 @@
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
+
+use App\GraphQL\Types\PostType;
+use App\GraphQL\Queries\PostQuery;
 
 return [
     'route' => [
@@ -76,6 +79,7 @@ return [
         'default' => [
             'query' => [
                 // ExampleQuery::class,
+                PostQuery::class
             ],
             'mutation' => [
                 // ExampleMutation::class,
@@ -83,6 +87,7 @@ return [
             // The types only available in this schema
             'types' => [
                 // ExampleType::class,
+                PostType::class
             ],
 
             // Laravel HTTP middleware
